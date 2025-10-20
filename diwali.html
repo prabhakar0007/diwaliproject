@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali!</title>
+    <style>
+        /* A little CSS magic for festivity! */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #0d0d0d; /* Dark background like the night sky */
+            font-family: 'Arial', sans-serif;
+            color: gold;
+            text-align: center;
+        }
+
+        .greeting {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ffcc00; /* Gold/Yellow */
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.8), 0 0 20px rgba(255, 102, 0, 0.6);
+        }
+
+        .deepak-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .deepak {
+            /* The main body of the Diya */
+            width: 80px;
+            height: 40px;
+            background-color: #cc6600; /* Earthenware color */
+            border-radius: 0 0 50% 50%;
+            position: relative;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .flame {
+            /* The flame part */
+            width: 20px;
+            height: 40px;
+            background: linear-gradient(to top, #ffcc00, #ff6600, #ff3300); /* Gradient for fire effect */
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+            position: absolute;
+            top: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            /* Animation for a subtle flicker */
+            animation: flicker 1s infinite alternate;
+            box-shadow: 0 0 15px 5px rgba(255, 153, 0, 0.9); /* Light glow */
+        }
+
+        @keyframes flicker {
+            from { transform: translateX(-50%) scale(1); opacity: 1; }
+            to { transform: translateX(-50%) scale(0.98); opacity: 0.95; }
+        }
+
+        .message {
+            margin-top: 30px;
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="greeting">🪔 Happy Diwali! ✨</h1>
+
+    <div class="deepak-container">
+        <div class="deepak"><div class="flame"></div></div>
+        <div class="deepak"><div class="flame"></div></div>
+        <div class="deepak"><div class="flame"></div></div>
+    </div>
+
+    <p class="message">
+        May this festival of lights bring you joy, peace, and prosperity!
+    </p>
+
+</body>
+</html>
